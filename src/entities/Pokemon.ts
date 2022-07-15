@@ -1,18 +1,27 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
-@Entity()
-export class User {
+@Entity("pokemon")
+export class Pokemon {
 
-    @PrimaryGeneratedColumn()
-    id: number
-
-    @Column()
-    firstName: string
+    @PrimaryGeneratedColumn("uuid")
+    id?: string
 
     @Column()
-    lastName: string
+    name: string
 
     @Column()
-    age: number
+    specie: string
+
+    @Column()
+    image: string
+
+    @Column()
+    height?: string
+
+    @Column()
+    weight?: string
+
+    @Column()
+    titulo?:string
 
 }
